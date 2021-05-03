@@ -33,28 +33,25 @@
 <body class="nosotros">
 
     <header>
-        <a href="index.html"><img src="media/logoblanco.png" alt="Logo" id="logo"></a>
+        <a href="index.html"><img src="media/logoblanco.png" alt="Logo" class="logo"></a>
         <nav>
+            <input type="checkbox" id="nav">
+            <label for="nav">
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
             <ul class="menu">
                 <li><a href="index.html" class="menu__enlace hvr-grow">HOME</a></li>
                 <li><a href="nosotros.html" class="menu__enlace hvr-grow">NOSOTROS</a></li>
                 <li><a href="paquetes.html" class="menu__enlace hvr-grow">PAQUETES</a>
-                    <ul>
-                        <div>
-                            <li class="subLi"><a href="" class="subLi">GASTRONOMIA</a></li>
-                            <li class="subLi"><a href="" class="subLi">TECNOLOGIA</a></li>
-                            <li class="subLi"><a href="" class="subLi">TRADICIONAL</a></li>
-                            <li class="subLi"><a href="" class="subLi">COMPRAS</a></li>
-                        </div>
-                    </ul>
-                </li>
                 <li><a href="galeria.html" class="menu__enlace hvr-grow">GALERIA</a></li>
                 <li><a href="contactanos.html" class="menu__enlace hvr-grow">CONTACTANOS</a></li>
             </ul>
-        </nav>
+          </nav>
     </header>
 
-
+    
     <section id="nosotros">
         <div class="nuestroEquipo">
             <h1 data-aos="zoom-in">Conocé a nuestro equipo</h1>
@@ -71,9 +68,9 @@
 
             <section class="imagenesTeam">
                 <div class="container">
-                    <div class="row">
+                    <div class="row grilla">
 
-                        <div class="col-md-3 col-sm-3">
+                        <div class="col-md-3 miembro">
                             <div class="team-member">
                                 <div class="team-img">
                                     <img src="media/alex1.png" alt="team member" class="img-responsive">
@@ -83,11 +80,6 @@
                                         <h4>Hola!</h4>
                                         <p>Tengo 25 años y soy licenciado en turismo. Mi comida japonesa favorita es el ramen.</p>
                                     </div>
-                                    <div class="s-link">
-                                        <a href="#"><i class="fa fa-facebook"></i></a>
-                                        <a href="#"><i class="fa fa-twitter"></i></a>
-                                        <a href="#"><i class="fa fa-google-plus"></i></a>
-                                    </div>
                                 </div>
                             </div>
                             <div class="team-title">
@@ -95,7 +87,7 @@
                                 <span>ESPAÑOL</span>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-3">
+                        <div class="col-md-3 miembro">
                             <div class="team-member">
                                 <div class="team-img">
                                     <img src="media/jose1.png" alt="team member" class="img-responsive">
@@ -105,11 +97,6 @@
                                         <h4>Bienvenido!</h4>
                                         <p>Soy fotógrafo ademas de guía y tengo 32 años. Me encanta fotografiar rincones de Japón.</p>
                                     </div>
-                                    <div class="s-link">
-                                        <a href="#"><i class="fa fa-facebook"></i></a>
-                                        <a href="#"><i class="fa fa-twitter"></i></a>
-                                        <a href="#"><i class="fa fa-google-plus"></i></a>
-                                    </div>
                                 </div>
                             </div>
                             <div class="team-title">
@@ -117,7 +104,7 @@
                                 <span>VENEZOLANO</span>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-3">
+                        <div class="col-md-3 miembro">
                             <div class="team-member">
                                 <div class="team-img">
                                     <img src="media/alicia3.png" alt="team member" class="img-responsive">
@@ -127,11 +114,6 @@
                                         <h4>Hola :)</h4>
                                         <p>Soy guía y licenciada en marketing. Me encanta viajar, vivo en Japón hace cuatro años</p>
                                     </div>
-                                    <div class="s-link">
-                                        <a href="#"><i class="fa fa-facebook"></i></a>
-                                        <a href="#"><i class="fa fa-twitter"></i></a>
-                                        <a href="#"><i class="fa fa-google-plus"></i></a>
-                                    </div>
                                 </div>
                             </div>
                             <div class="team-title">
@@ -139,7 +121,7 @@
                                 <span>ARGENTINA</span>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-3">
+                        <div class="col-md-3 miembro">
                             <div class="team-member">
                                 <div class="team-img">
                                     <img src="media/matias1.png" alt="team member" class="img-responsive">
@@ -148,11 +130,6 @@
                                     <div class="desk">
                                         <h4>Bienvenido</h4>
                                         <p>Tengo 27 años y soy diseñador gráfico. Me divierte mucho pasear por Japón</p>
-                                    </div>
-                                    <div class="s-link">
-                                        <a href="#"><i class="fa fa-facebook"></i></a>
-                                        <a href="#"><i class="fa fa-twitter"></i></a>
-                                        <a href="#"><i class="fa fa-google-plus"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -172,44 +149,47 @@
     </section>
 
 
-        <footer>
-
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-4 col-lg-4 mapa">
-
-                        <h1>DONDE ESTAMOS</h1>
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d793.7596389700067!2d139.70266381652382!3d35.69678067585396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cd80ca5e8e1%3A0x206efdeabe8e52d2!2zSmFww7NuLCDjgJIxNjAtMDAyMSBUb2t5bywgU2hpbmp1a3UgQ2l0eSwgS2FidWtpY2jFjSwgMi1jaMWNbWXiiJIzNOKIkjUg44Kq44K544Ot44O844OQ44OD44OG44Kj44Oz44Kw44K744Oz44K_44O8!5e0!3m2!1ses!2sar!4v1616863791723!5m2!1ses!2sar"
-                            width="340" height="140" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
-
-                    <div class="col-md-4 col-lg-4 contacto">
-                        <h1>CONTACTO</h1>
-                        <p>3番号 Shinjuku, Tokyo</p>
-                        <p>+81 (89052) 556467</p>
-                        <p>+81 (7632) 324 454</p>
-
-                    </div>
-                    <div class="col-md-4 col-lg-4 seguinos">
-                        <h1>SEGUINOS</h1>
+    <footer>
+        <div class="footer-dark">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-lg-4 item">
+                            <h3>LEGALES</h3>
+                            <ul>
+                                <li class="list_item">Términos y condiciones</li>
+                                <li class="list_item">Política de privacidad</li>
+                                <li class="list_item">Ley defensa del consumidor</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-lg-4 item">
+                            <h3>CONTACTO</h3>
+                            <ul>
+                                <li class="list_item">3番号 Shinjuku, Tokyo</li>
+                                <li class="list_item">+81 (89052) 556467</li>
+                                <li class="list_item">+81 (7632) 324 454</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-lg-4 item text">
+                            <h3>COMPAÑIA</h3>
+                            <ul>
+                            <li class="list_item"><a href="nosotros.html">Sobre nosotros</a></li>
+                            <li class="list_item"><a href="paquetes.html">Paquetes</a></li>
+                            <li class="list_item"><a href="contactanos.html">Consultas</a></li>
+                            </ul>
+                        </div>
+                        
+                    <div class="col item social">
                         <ul class="social-network social-circle">
                             <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a>
-                            </li>
+                            <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
                         </ul>
                     </div>
-
-
+                    <p class="copyright">Sakura Tours © 2021</p>
                 </div>
+        </div>
 
-            </div>
-
-    
-
-
-        </footer>
+    </footer>
 
 
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
