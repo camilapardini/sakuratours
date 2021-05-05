@@ -188,7 +188,7 @@
 header {
   background-color: #902923;
   height: 12vh;
-  width: 100%;
+  width: 100vw;
   font-family: 'Oswald', sans-serif;
   display: flex;
   align-items: center;
@@ -305,6 +305,12 @@ header {
 .hvr-grow:active {
   -webkit-transform: scale(1.1);
   transform: scale(1.1); }
+
+@media only screen and (max-width: 550px) {
+  header {
+    height: 15vh; }
+    header .logo {
+      height: 4.8em; } }
 
 /* ----------- FOOTER ------------- 
 
@@ -610,10 +616,7 @@ ul.social-network {
 .index {
   background-color: #ffffff;
   font-family: "Roboto", sans-serif;
-  color: #2d2a2a;
-  height: 2500px;
-  display: grid;
-  grid-template-rows: 10vh 1900px 30vh; }
+  color: #2d2a2a; }
 
 .home .contenedorWaves {
   width: 100vw;
@@ -695,7 +698,6 @@ ul.social-network {
     transform: scaleX(1); }
 
 .home .presentacion {
-  height: 450px;
   width: 100vw;
   font-family: "Roboto", sans-serif;
   display: flex;
@@ -730,28 +732,26 @@ ul.social-network {
     text-transform: uppercase;
     text-shadow: 0px 4px 5px rgba(23, 1, 5, 0.235); }
 
+@media (min-width: 0px) and (max-width: 1210px) {
+  .home .presentacion h2 {
+    width: 80%; } }
+
 .home .testimonios {
-  width: 100vw;
-  height: 600px;
-  padding-bottom: 2.2em;
-  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-shadow: 0px 4px 5px rgba(23, 1, 5, 0.235); }
+  flex-wrap: wrap; }
   .home .testimonios__contenedor {
     width: 100vw;
     position: relative;
     overflow: visible;
-    margin: 0px 70px 0px 70px;
+    margin: 0px 5em 0px 5em;
     height: auto;
     min-width: 220px;
     max-width: 310px;
-    width: 100%;
     color: #333;
     text-align: left;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-    border-radius: 8px; }
+    margin-top: 5em; }
     .home .testimonios__contenedor * {
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
@@ -759,6 +759,8 @@ ul.social-network {
       transition: all 0.35s cubic-bezier(0.25, 0.5, 0.5, 0.9); }
     .home .testimonios__contenedor img {
       max-width: 100%;
+      max-height: 350px;
+      border-radius: 10px;
       vertical-align: middle; }
     .home .testimonios__contenedor blockquote {
       position: relative;
@@ -767,7 +769,10 @@ ul.social-network {
       font-size: 1.1em;
       text-align: left;
       margin: 0;
-      line-height: 1.6em; }
+      line-height: 1.6em;
+      border: none;
+      border-radius: 10px;
+      width: 19em; }
       .home .testimonios__contenedor blockquote:before, .home .testimonios__contenedor blockquote:after {
         font-family: 'FontAwesome';
         content: "\201C";
@@ -792,15 +797,16 @@ ul.social-network {
       margin: 0;
       position: absolute; }
     .home .testimonios__contenedor .autor {
-      position: absolute;
+      position: relative;
       bottom: 0;
-      width: 100%;
+      width: 95%;
       padding: 5px 25px;
       color: #000000;
       background-color: #ffffff;
       margin: 0;
       font-family: "Roboto", sans-serif;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      border-radius: 10px; }
       .home .testimonios__contenedor .autor h5 {
         opacity: 0.8;
         margin: 0;
@@ -809,10 +815,28 @@ ul.social-network {
         .home .testimonios__contenedor .autor h5 span {
           text-transform: none;
           padding-left: 5px; }
+  @media (min-width: 0px) and (max-width: 350px) {
+    .home .testimonios .testimonios {
+      height: 700px; }
+      .home .testimonios .testimonios__contenedor {
+        margin: 10px 10px 10px 10px; } }
+  @media (min-width: 351px) and (max-width: 516px) {
+    .home .testimonios .testimonios {
+      height: 900px; }
+      .home .testimonios .testimonios__contenedor {
+        margin: 10px 10px 10px 10px; } }
+  @media (min-width: 517px) and (max-width: 980px) {
+    .home .testimonios .testimonios {
+      height: 1000px; }
+      .home .testimonios .testimonios__contenedor {
+        margin: 10px 10px 10px 10px; } }
+  @media (min-width: 981px) and (max-width: 10000px) {
+    .home .testimonios .testimonios__contenedor {
+      margin: 10px 10px 10px 10px; } }
 
 .home .nosEligen {
   width: 100vw;
-  height: 700px;
+  margin-top: 8em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -830,17 +854,18 @@ ul.social-network {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     text-shadow: 0px 4px 5px rgba(48, 21, 13, 0.32); }
-  .home .nosEligen #contenedorGeneralTarjetas #contenedorTarjetas, .home .nosEligen #contenedorGeneralTarjetas #contenedorTarjetasDos {
-    width: 1100px;
+  .home .nosEligen .contenedorTarjetas {
+    width: 1500px;
     display: flex;
+    flex-flow: row wrap;
     justify-content: center; }
-  .home .nosEligen #contenedorGeneralTarjetas .flip-box-back p {
+  .home .nosEligen .flip-box-back p {
     font-size: 1.5rem;
     line-height: 3rem;
     color: #fff;
     width: 70%;
     text-shadow: 0px 4px 5px rgba(113, 109, 109, 0.32); }
-  .home .nosEligen #contenedorGeneralTarjetas .flip-box {
+  .home .nosEligen .flip-box {
     position: relative;
     display: inline-block;
     margin-top: 3em;
@@ -848,20 +873,20 @@ ul.social-network {
     margin-bottom: 3em;
     margin-left: 3em;
     background-color: transparent;
-    width: 500px;
+    width: 300px;
     height: 200px;
     perspective: 1000px; }
-  .home .nosEligen #contenedorGeneralTarjetas .flip-box-inner {
+  .home .nosEligen .flip-box-inner {
     position: relative;
     width: 100%;
     height: 100%;
     text-align: center;
     transition: transform 0.6s;
     transform-style: preserve-3d; }
-  .home .nosEligen #contenedorGeneralTarjetas .flip-box:hover .flip-box-inner {
+  .home .nosEligen .flip-box:hover .flip-box-inner {
     transform: rotateY(180deg); }
-  .home .nosEligen #contenedorGeneralTarjetas .flip-box-front,
-  .home .nosEligen #contenedorGeneralTarjetas .flip-box-back {
+  .home .nosEligen .flip-box-front,
+  .home .nosEligen .flip-box-back {
     position: absolute;
     background-size: cover !important;
     background-position: center !important;
@@ -869,25 +894,72 @@ ul.social-network {
     height: 100%;
     border-radius: 10px;
     backface-visibility: hidden; }
-  .home .nosEligen #contenedorGeneralTarjetas .flip-box-front {
+  .home .nosEligen .flip-box-front {
     color: white;
     background-color: #902923;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center; }
-    .home .nosEligen #contenedorGeneralTarjetas .flip-box-front p {
+    .home .nosEligen .flip-box-front p {
       font-size: 1.8rem;
       text-shadow: 0px 4px 5px rgba(48, 21, 13, 0.32);
       width: 70%;
       padding-top: 20px; }
-  .home .nosEligen #contenedorGeneralTarjetas .flip-box-back {
+  .home .nosEligen .flip-box-back {
     background-color: #d0b07e;
     color: white;
     transform: rotateY(180deg);
     display: flex;
     align-items: center;
     justify-content: center; }
+
+@media (min-width: 0px) and (max-width: 350px) {
+  .home .nosEligen .contenedorTarjetas {
+    width: 300px; }
+  .home .nosEligen .flip-box {
+    width: 200px;
+    height: 100px; }
+  .home .nosEligen .flip-box-front p {
+    font-size: 1.2rem; }
+  .home .nosEligen .flip-box-back p {
+    font-size: 1.2rem;
+    line-height: 1.8rem; } }
+
+@media (min-width: 351px) and (max-width: 516px) {
+  .home .nosEligen .contenedorTarjetas {
+    width: 300px; }
+  .home .nosEligen .flip-box {
+    width: 220px;
+    height: 120px; }
+  .home .nosEligen .flip-box-front p {
+    font-size: 1.2rem; }
+  .home .nosEligen .flip-box-back p {
+    font-size: 1.2rem;
+    line-height: 1.8rem; } }
+
+@media (min-width: 517px) and (max-width: 980px) {
+  .home .nosEligen .contenedorTarjetas {
+    width: 700px; }
+  .home .nosEligen .flip-box {
+    width: 220px;
+    height: 120px; }
+  .home .nosEligen .flip-box-front p {
+    font-size: 1.2rem; }
+  .home .nosEligen .flip-box-back p {
+    font-size: 1.2rem;
+    line-height: 1.8rem; } }
+
+@media (min-width: 981px) and (max-width: 1130px) {
+  .home .nosEligen .contenedorTarjetas {
+    width: 1100px; }
+  .home .nosEligen .flip-box {
+    width: 250px;
+    height: 150px; }
+  .home .nosEligen .flip-box-front p {
+    font-size: 1.3rem; }
+  .home .nosEligen .flip-box-back p {
+    font-size: 1.3rem; } }
 
 /*-------------CSS DE NOSOTROS----------------*/
 #nosotros {
@@ -901,7 +973,7 @@ ul.social-network {
 
 @media (min-width: 0px) and (max-width: 459px) {
   #nosotros {
-    height: 2000px; } }
+    height: 2050px; } }
 
 @media (min-width: 460px) and (max-width: 767px) {
   #nosotros {
@@ -953,7 +1025,8 @@ ul.social-network {
 
 @media (min-width: 10px) and (max-width: 1130px) {
   .queHacemos {
-    margin-bottom: 0px; }
+    margin-bottom: 0px;
+    margin-top: 3em; }
     .queHacemos p {
       width: 80%;
       font-size: 1.8rem; } }
@@ -973,7 +1046,7 @@ ul.social-network {
 @media only screen and (max-width: 460px) {
   .row {
     display: grid;
-    height: 1000px;
+    height: 700px;
     justify-content: center;
     align-items: center; }
   .miembro {

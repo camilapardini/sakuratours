@@ -195,11 +195,12 @@ sans-serif;
 header{
     background-color: $colorPrincipal;
     height: 12vh;
-    width: 100%;
+    width: 100vw;
     font-family: 'Oswald', sans-serif;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 
 
 
@@ -388,3 +389,15 @@ header{
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
+
+
+@media only screen and (max-width: 550px){
+    header{
+        height: 15vh;
+
+        .logo{
+            height: 4.8em;
+        }
+    }
+}
+
