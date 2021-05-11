@@ -1,216 +1,24 @@
-
 $colorPrincipal: #902923;
 $colorSecundario: #d0b07e;
 $fuenteContenido: 'Roboto',
 sans-serif;
 
-/* ----------- HEADER ------------- 
+/* ----------- HEADER ------------- */
 
-
- header {
-
+header {
     background-color: $colorPrincipal;
     height: 12vh;
+    width: 100%;
     font-family: 'Oswald', sans-serif;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-
-    #logo {
-        height: 90px;
-        padding-left: 100px;
-        padding-top: 5px;
-
-    }
-
-    nav {
-        background-color: $colorPrincipal;
-        display: flex;
-        flex-wrap: wrap;
-        padding-left: 0;
-        margin-right: 20px;
-    }
-
-    .menu {
-        list-style: none;
-        width: 100%;
-        margin-right: 60px;
-        display: flex;
-        flex-direction: row;
-        font-size: 2.8rem;
-        padding: 5px;
-        justify-content: flex-end;
-        align-items: center;
-
-        &__enlace {
-            text-decoration: none;
-            color: rgb(235, 227, 227);
-            padding-left: 25px;
-            text-shadow: 0px 4px 5px rgba(34, 33, 33, 0.23);
-
-            &:hover {
-                color: rgb(24, 24, 24);
-                text-decoration: none;
-            }
-        }
-
-    }
-
-    ul {
-
-        ul {
-            position: absolute;
-            display: none;
-            text-decoration: none;
-            box-sizing: border-box;
-
-
-            li {
-                display: block;
-                padding: 10px 10px;
-                font-size: 2rem;
-                background-color: rgba(18, 17, 17, 0.927);
-                left: 1em;
-                top: 0.5em;
-                animation-name: aparecer;
-                animation-duration: 1s;
-
-                @keyframes aparecer {
-                    0% {
-                        opacity: 0;
-                    }
-
-                    100% {
-                        opacity: 1;
-                    }
-                }
-
-
-
-
-                &:hover {
-                    color: black;
-                    background-color: $colorSecundario;
-                    border-bottom: 1px solid white;
-                }
-            }
-        }
-
-        li {
-            &:hover {
-                ul {
-                    font-size: 2rem;
-                    padding: 0px;
-                    padding-top: 3px;
-                    list-style-type: none;
-                    display: flex;
-                    flex-direction: column;
-                }
-            }
-        }
-    }
-
-    .subLi {
-        text-decoration: none;
-        color: rgb(235, 227, 227);
-        position: relative;
-    }
-
-}
-
-.hvr-grow {
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-property: transform;
-    transition-property: transform;
-}
-
-.hvr-grow:hover,
-.hvr-grow:focus,
-.hvr-grow:active {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-}
-
-
-@media (min-width: 0px) and (max-width: 1040px) {
-
-    header {
-        height: 300px;
-        display: grid;
-        grid-template-rows: 30% 70%;
-        grid-area: "logo"
-            "nav";
-
-
-        #logo {
-            grid-area: logo;
-            height: 100px;
-
-            padding: 20px 20px;
-
-        }
-
-        nav{
-            width: 100vw;
-        }
-
-
-        .menu {
-            grid-area: nav;
-            width: 100vw;
-            background-color: $colorPrincipal;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            ul {
-
-                display: none;
-
-                li {
-                    display: none;
-                    /*text-decoration: none;
-            box-sizing: border-box;
-            top: 9em;
-            right: 7em;
-            
-                }
-
-            }
-        }
-    }
-} 
-
-*/
-
-
-header{
-    background-color: $colorPrincipal;
-    height: 12vh;
-    width: 100vw;
-    font-family: 'Oswald', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-
-
 
     .logo {
         width: auto;
         height: 6em;
         padding-left: 70px;
         padding-top: 5px;
-   
-
     }
 
     nav {
@@ -219,10 +27,6 @@ header{
         flex-wrap: wrap;
         padding-left: 0;
         margin-right: 20px;
-        
-    
-        
-        
 
         label {
             position: absolute;
@@ -245,6 +49,7 @@ header{
                 border-radius: 1px;
                 background: rgb(227, 224, 224);
                 transition: 0.5s;
+
                 &:nth-child(1) {
                     margin-top: 40px;
                 }
@@ -252,13 +57,11 @@ header{
         }
     }
 
-    a{
+    a {
         list-style: none;
         text-decoration: none;
         color: rgb(237, 228, 228)
-
     }
-
 
     .menu {
         position: relative;
@@ -266,7 +69,7 @@ header{
         float: right;
         list-style-type: none;
         transition: top 0.5s cubic-bezier(0.3, 0.1, 0.3, 0.85);
-        
+
         li {
             font-family: 'Oswald', sans-serif;
             color: rgb(237, 228, 228);
@@ -279,9 +82,9 @@ header{
                 &::before {
                     width: 49px;
                     color: rgb(237, 228, 228)
-                    
                 }
             }
+
             &:nth-child(3) {
                 &:hover {
                     &::before {
@@ -289,38 +92,41 @@ header{
                     }
                 }
             }
-                 
-            a{
+
+            a {
                 text-decoration: none;
 
-                &:hover{
+                &:hover {
                     color: rgb(33, 32, 32);
                 }
             }
         }
-       
     }
-   
+
     input[type=checkbox] {
         position: absolute;
         top: -9999px;
         left: -9999px;
-        
+
         &:checked {
             ~ {
                 .menu {
                     top: 0;
                 }
+
                 label {
                     span {
-                        
+
                         background: #fff;
+
                         &:nth-child(1) {
                             transform: translateY(8px) rotate(45deg);
                         }
+
                         &:nth-child(2) {
                             opacity: 0;
                         }
+
                         &:nth-child(3) {
                             transform: translateY(-8px) rotate(-45deg);
                         }
@@ -328,46 +134,6 @@ header{
                 }
             }
         }
-    }
-    
-    @media (max-width: 1093px) {
-
-        .logo {
-            padding-left: 40px;
-
-        }
-
-        .menu {
-            position: absolute;
-            top: 100px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: 0;
-            top: -100vh;
-            left: 0;
-            height: 75vh;
-            width: 100%;
-            background: $colorPrincipal;
-            z-index: 1;
-            
-            li {
-                margin: 20px;
-                font-size: 1.8em;
-                color: #fff;
-            }
-        }
-
-        nav {
-            
-
-            label {
-                display: block;
-                z-index: 10;
-            }
-        }
-        
     }
 }
 
@@ -391,13 +157,52 @@ header{
 }
 
 
-@media only screen and (max-width: 550px){
-    header{
+/*--- RESPONSIVE MEDIA QUERY ----*/
+@media only screen and (max-width: 550px) {
+    header {
         height: 15vh;
 
-        .logo{
+        .logo {
             height: 4.8em;
         }
     }
 }
 
+@media (max-width: 1093px) {
+    header {
+        .logo {
+            padding-left: 40px;
+        }
+
+        .menu {
+            position: absolute;
+            top: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            top: -100vh;
+            left: 0;
+            height: 75vh;
+            width: 100%;
+            background: $colorPrincipal;
+            z-index: 1;
+
+            li {
+                margin: 20px;
+                font-size: 1.8em;
+                color: #fff;
+            }
+        }
+
+        nav {
+
+
+            label {
+                display: block;
+                z-index: 10;
+            }
+        }
+    }
+}
