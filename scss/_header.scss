@@ -16,14 +16,16 @@ header {
 
     .logo {
         width: auto;
-        height: 6em;
+        height: 10vh;
         padding-left: 70px;
         padding-top: 5px;
     }
 
     nav {
+        height: 100%;
         background-color: $colorPrincipal;
         display: flex;
+        align-items: center;
         flex-wrap: wrap;
         padding-left: 0;
         margin-right: 20px;
@@ -158,6 +160,7 @@ header {
 
 
 /*--- RESPONSIVE MEDIA QUERY ----*/
+
 @media only screen and (max-width: 550px) {
     header {
         height: 15vh;
