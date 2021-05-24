@@ -1477,6 +1477,18 @@ sans-serif;
 
 /* GALERIA */
 
+@media screen and (max-width: 530px){
+    .light-box{
+
+        .next {
+            width: 30px;
+            height: 30px;
+            margin: 5px;
+        }
+    }
+    
+}
+
 @media screen and (max-width: 809px) {
     .galeria {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -1485,11 +1497,6 @@ sans-serif;
     .close {
         top: 20px;
         right: 20px;
-    }
-
-    .next {
-        width: 20px;
-        height: 20px;
     }
 
     .light-box {
